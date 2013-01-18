@@ -1,0 +1,27 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: org.xtext.petrinet.mydsl1
+Bundle-Vendor: My Company
+Bundle-Version: 1.0.0.qualifier
+Bundle-SymbolicName: org.xtext.petrinet.mydsl1; singleton:=true
+Bundle-ActivationPolicy: lazy
+Require-Bundle: org.eclipse.xtext;visibility:=reexport,
+ org.eclipse.xtext.xbase;resolution:=optional;visibility:=reexport,
+ org.eclipse.xtext.generator;resolution:=optional,
+ org.apache.commons.logging;bundle-version="1.0.4";resolution:=optional,
+ org.eclipse.emf.codegen.ecore;resolution:=optional,
+ org.eclipse.emf.mwe.utils;resolution:=optional,
+ org.eclipse.emf.mwe2.launch;resolution:=optional,
+ RedPetri,
+ org.eclipse.xtext.util,
+ org.antlr.runtime
+Import-Package: org.apache.log4j
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Export-Package: org.xtext.petrinet.mydsl1,
+ org.xtext.petrinet.mydsl1.services,
+ org.xtext.petrinet.mydsl1.parseTreeConstruction,
+ org.xtext.petrinet.mydsl1.parser.antlr,
+ org.xtext.petrinet.mydsl1.parser.antlr.internal,
+ org.xtext.petrinet.mydsl1.validation,
+ org.xtext.petrinet.mydsl1.scoping,
+ org.xtext.petrinet.mydsl1.formatting
