@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.graphiti.ui.diagramTypes">
+      <diagramType
+            name="GraphitiPetri Diagram Type"
+            type="GraphitiPetri"
+            id="GraphitiPetri.GraphitiPetriDiagramType">
+      </diagramType>
+   </extension>
+   <extension
+         point="org.eclipse.graphiti.ui.diagramTypeProviders">
+      <diagramTypeProvider
+            name="GraphitiPetri Diagram Type Provider"
+            class="graphitipetri.diagram.GraphitiPetriDiagramTypeProvider"
+            id="GraphitiPetri.GraphitiPetriDiagramTypeProvider">
+         <diagramType
+               id="GraphitiPetri.GraphitiPetriDiagramType">
+         </diagramType>
+      </diagramTypeProvider>
+   </extension>
+
+</plugin>
