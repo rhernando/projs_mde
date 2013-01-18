@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/RedPetri/src" modelPluginID="RedPetri" modelName="Petrinet_gen"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="6.0" copyrightFields="false">
+  <foreignModel>petri.ecore</foreignModel>
+  <genPackages prefix="Petri" basePackage="petrinet" disposableProviderFactory="true"
+      ecorePackage="petri.ecore#/">
+    <genClasses ecoreClass="petri.ecore#//Place">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petri.ecore#//Place/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petri.ecore#//Place/tokens"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference petri.ecore#//Place/connection"/>
+    </genClasses>
+    <genClasses ecoreClass="petri.ecore#//Transition">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petri.ecore#//Transition/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference petri.ecore#//Transition/connection"/>
+    </genClasses>
+    <genClasses ecoreClass="petri.ecore#//RedPetri">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference petri.ecore#//RedPetri/iniPlace"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference petri.ecore#//RedPetri/iniTrans"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
