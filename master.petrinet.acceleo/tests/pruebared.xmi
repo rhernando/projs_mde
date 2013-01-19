@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<petri:RedPetri xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:petri="petri">
+  <iniPlace name="Queue" tokens="2" connection="//@iniTrans.1"/>
+  <iniPlace name="Busy" tokens="1" connection="//@iniTrans.2"/>
+  <iniPlace name="Idle" connection="//@iniTrans.1"/>
+  <iniPlace name="Exit" connection="//@iniTrans.3"/>
+  <iniTrans name="Arrival" connection="//@iniPlace.0"/>
+  <iniTrans name="Process" connection="//@iniPlace.1"/>
+  <iniTrans name="Finish" connection="//@iniPlace.2 //@iniPlace.3"/>
+  <iniTrans name="Disposal"/>
+</petri:RedPetri>
