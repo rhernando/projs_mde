@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="ASCII"?>
+<PetriNet:PetriNet
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:PetriNet="http://master/exercise/PetriNet"
+    xsi:schemaLocation="http://master/exercise/PetriNet ../model/PetriNet.ecore"
+    name="MyPetriNet">
+  <elements
+      xsi:type="PetriNet:Place"
+      name="p1"
+      tokens="1"/>
+  <elements
+      xsi:type="PetriNet:Place"
+      name="p2"
+      tokens="0"/>
+  <elements
+      xsi:type="PetriNet:Transition"
+      name="t1_p2_p3"/>
+  <elements
+      xsi:type="PetriNet:Place"
+      name="p3"
+      tokens="3"/>
+  <arcs input="//@elements.0"
+      output="//@elements.2"/>
+  <arcs input="//@elements.2"
+      output="//@elements.1"/>
+  <arcs input="//@elements.2"
+      output="//@elements.3"/>
+</PetriNet:PetriNet>

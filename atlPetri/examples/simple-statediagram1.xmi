@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="ASCII"?>
+<StateDiagram:StateDiagram
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:StateDiagram="http://master/exercise/StateDiagram"
+    xsi:schemaLocation="http://master/exercise/StateDiagram ../metamodels/StateDiagram.ecore"
+    name="Simple1">
+  <states name="WakeUp"
+      isInitial="true">
+    <transitions
+        next="//@states.1"/>
+    <transitions
+        next="//@states.2"/>
+  </states>
+  <states name="HaveBreakfast">
+    <transitions
+        next="//@states.3"/>
+  </states>
+  <states name="HaveAShower">
+    <transitions
+        next="//@states.4"/>
+  </states>
+  <states name="BrushYourTeeth">
+    <transitions
+        next="//@states.4"/>
+  </states>
+  <states name="GoToWork"/>
+</StateDiagram:StateDiagram>

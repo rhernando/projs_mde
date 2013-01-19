@@ -1,0 +1,52 @@
+-- @path petriNet=/atlPetri/metamodels/PetriNet.ecore
+-- @path stateDiagram=/atlPetri/metamodels/StateDiagram.ecore
+
+
+module petrinet2sd;
+create OUT: petriNet from IN: stateDiagram;
+
+rule PetriNet {
+	from
+		sd: stateDiagram!StateDiagram
+	to
+		p: petriNet!PetriNet (
+			name <- sd.name
+		)
+}
+
+rule createPlace {
+	from
+		s: stateDiagram!State
+	to
+		p: petriNet!Place (
+			name <- s.name,
+			tokens <- if (s.isInitial) then
+					1
+				else
+					0
+				endif
+			
+		)
+		
+}
+
+
+lazy rule createTransition {
+	from
+		tsd: stateDiagram!Transition
+	to
+		tpn: petriNet!Transition(
+			name <- tsd.next.name.concat('_trans')
+			)
+}
+
+rule createArc {
+	from
+		tsd: stateDiagram!Transition
+	to
+		arc: petriNet!Arc(
+			output <- thisModule.createTransition(tsd)
+			)
+}
+
+

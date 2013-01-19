@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:PetriNet="http://master/exercise/PetriNet">
+  <PetriNet:PetriNet name="Simple1"/>
+  <PetriNet:Place name="WakeUp" tokens="1"/>
+  <PetriNet:Place name="HaveBreakfast"/>
+  <PetriNet:Place name="HaveAShower"/>
+  <PetriNet:Place name="BrushYourTeeth"/>
+  <PetriNet:Place name="GoToWork"/>
+  <PetriNet:Arc output="/11"/>
+  <PetriNet:Arc output="/12"/>
+  <PetriNet:Arc output="/13"/>
+  <PetriNet:Arc output="/14"/>
+  <PetriNet:Arc output="/15"/>
+  <PetriNet:Transition name="HaveBreakfast_trans"/>
+  <PetriNet:Transition name="HaveAShower_trans"/>
+  <PetriNet:Transition name="BrushYourTeeth_trans"/>
+  <PetriNet:Transition name="GoToWork_trans"/>
+  <PetriNet:Transition name="GoToWork_trans"/>
+</xmi:XMI>
